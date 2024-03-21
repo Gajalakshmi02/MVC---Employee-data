@@ -1,0 +1,21 @@
+﻿@using EmployeeInfo.Models
+@model IEnumerable<Department>
+
+@{
+    ViewBag.Title = "Department List";
+}
+
+<div style="font-family: Arial;">
+    <h2>Department List</h2>
+
+    <ul>
+        @foreach (var department in Model)
+        {
+            <li>
+                <a href="@Url.Action("Index", "Employee", new { departmentId = department.DepId })">
+                    @department.Name
+                </a>
+            </li>
+        }
+    </ul>
+</div>

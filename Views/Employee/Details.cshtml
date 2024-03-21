@@ -1,0 +1,35 @@
+﻿@model EmployeeInfo.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Employee Details</h2>
+
+<table style="font-family: Arial">
+   
+    <tr>
+        <td>
+            Name:
+        </td>
+        <td>
+            @Model.EmpName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Gender:
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+    </tr>
+    <tr>
+        <td>
+            City:
+        </td>
+        <td>
+            @Model.EmpLocation <!-- Use the correct property name for the city -->
+        </td>
+    </tr>
+</table>
